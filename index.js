@@ -41,7 +41,7 @@ app.get('/api/timestamp/:date?', (req, res) => {
     res.json({ unix: dateInt, utc: date });
   }
 
-  res.status(400).json({ error: date })
+  res.json({ error: date })
 })
 
 // listen for requests :)
