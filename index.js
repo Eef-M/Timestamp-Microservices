@@ -24,11 +24,11 @@ app.get("/api/hello", function (req, res) {
   res.json({ greeting: 'hello API' });
 });
 
-app.get('/api/timestamp/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send({ unix: Date.now(), utc: Date() })
 })
 
-app.get('/api/timestamp/:date?', (req, res) => {
+app.get('/api/:date?', (req, res) => {
 
   let date = new Date(req.params.date);
   if (date != "Invalid Date") {
